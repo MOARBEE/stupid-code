@@ -21,7 +21,7 @@ public class test {
         if (password != SETPASS || counter == 3) {
             System.out.println("You are out of tries, would you like to try again? ");
             answer = scanner.next();
-            if (answer == "yes") {
+            if (answer.equals("yes")) {
                 System.out.println("what is your password?: ");
                 password = scanner.nextInt();
                      while (password != SETPASS && newcounter < 2) {
@@ -34,14 +34,18 @@ public class test {
                 System.out.println("Welcome");
 
             }
-            else if (answer == "no") {
+            else if (answer.equals("no")) {
                 System.out.println("goodbye");
+            }
+            if(password != SETPASS || newcounter == 3){
+                System.out.println("you have been blocked.");
             }
         }
 
         if (password == SETPASS && newcounter <= 3) {
                 System.out.println("Welcome");
             }
+
     }
 
 
